@@ -1,5 +1,5 @@
 body{
-	font-family: "Verdana", "Arial", sans-serif;
+	font-family: "Helvetica", "Verdana", "Noto Sans", sans-serif;
 	background-color: lightgreen;
 }
 .center{
@@ -13,8 +13,10 @@ img.center{
 }
 .footer{
 	background-color: green;
-	font-size:11px ;
-	color:white ;
+	font-size: 11px ;
+	color: white;
+	position: fixed;
+	bottom: 0;
 }
 .header{
 	background-color: green;
