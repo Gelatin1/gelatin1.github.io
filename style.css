@@ -13,10 +13,14 @@ img.center{
 }
 .footer{
 	background-color: green;
-	font-size: 11px ;
+	font-size: 14px;
 	color: white;
 	position: fixed;
-	bottom: 0;
+	bottom: 0px;
+	left: 0px;
+    right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 .header{
 	background-color: green;
