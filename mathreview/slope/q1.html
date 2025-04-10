@@ -28,11 +28,12 @@
                 </p>
 		    </div>
             <div class="float">
-                <form>
+                <form id="answerform">
                     <label for="answer">Answer:</label>
                     <input type="text" id="answer" name="answer">
-                    <input type="submit" value="Submit" action="">
+                    <input type="submit" value="Submit">
                 </form>
+				<p id="output"></p>
             </div>
         </div>
 		<div class="footer">
@@ -40,5 +41,18 @@
 				&#8239;This page brought to you by Lukas
 			</p>
 		</div>
+		<script>
+			const answerform = document.getElementById('answerform')
+			answerform.addEventListener('submit', function(event) {
+				const answer = document.getElementById('answer').value;
+				const output = document.getElementById('output').value;
+				event.preventDefault();
+				if(answer == 'Test') {
+					output = 'Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.'
+				} else{
+					output = 'Incorrect. Please try again.'
+				}
+			})
+		</script>
 	</body>
 </html>
