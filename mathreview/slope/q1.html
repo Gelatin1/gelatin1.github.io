@@ -42,10 +42,10 @@
 			</p>
 		</div>
 		<script>
-			const answerform = document.getElementById('answerform');
+			var answerform = document.getElementById('answerform');
 			answerform.addEventListener('submit', function(event) {
-				const answer = document.getElementById('answer').value;
-				const output = document.getElementById('output').innerHTML;
+				var answer = document.getElementById('answer').value;
+				var output = document.getElementById('output').innerHTML;
 				event.preventDefault();
 				if(answer == 'Test') {
 					output = 'Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.';
