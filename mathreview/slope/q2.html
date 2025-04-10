@@ -7,7 +7,7 @@
 		<meta property="og:title" content="Lukas's Website">
 		<meta property="og:description" content="This is my super boring website.">
 		<meta property="og:image" content="/img/koala.png">
-		<title>Slope: Question 1</title>
+		<title>Slope: Question 2</title>
 		<link rel="stylesheet" href="/style.css">
 		<link rel="icon" href="/img/koala.png">
 	</head>
@@ -22,15 +22,21 @@
 		</div>
         <div class="main">
 		    <div class="float">
-			    <h1>Slope: Question 1</h1>
+			    <h1>Slope: Question 2</h1>
                 <p>
-                    A camper lights an oil lantern at noon and lets it burn continuously. Once the lantern is lit, the lantern burns oil at a constant rate each hour. At 2 p.m., the amount of oil left in the lantern is 63 ounces. At 5 p.m., the amount of oil left in the lantern is 61½ ounces. What is the average rate of oil burning, in ounces, every hour?
+                    Graph a line that goes through the points (0,3) and (2,-1). What is the slope of the line?
                 </p>
 		    </div>
             <div class="float">
                 <form id="answerform">
-                    <label for="answer">Answer:</label>
-                    <input type="text" id="answer" name="answer">
+                    <label for="a">-2/1</label><br>
+                    <input type="radio" id="a" name="answer" value="-2/1">
+                    <label for="b">-1/2</label><br>
+                    <input type="radio" id="b" name="answer" value="-1/2">
+                    <label for="c">2/1</label><br>
+                    <input type="radio" id="c" name="answer" value="2/1">
+                    <label for="d">1/2</label><br>
+                    <input type="radio" id="d" name="answer" value="1/2">
                     <input type="submit" value="Submit">
                 </form>
             </div>
@@ -43,9 +49,9 @@
 		<script>
 			var answerform = document.getElementById('answerform');
 			answerform.addEventListener('submit', function(event) {
-				var answer = document.getElementById('answer').value;
+				var answer = answerform.elements["answer"].value;
 				event.preventDefault();
-				if(answer === '0.5' || answer === '1/2') {
+				if(answer === '-2/1') {
 					alert('Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.');
 					return;
 				} else {
