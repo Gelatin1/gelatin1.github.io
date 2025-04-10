@@ -45,7 +45,7 @@
 			const answerform = document.getElementById('answerform')
 			answerform.addEventListener('submit', function(event) {
 				const answer = document.getElementById('answer').value;
-				const output = document.getElementById('output').value;
+				const output = document.getElementById('output').textContent;
 				event.preventDefault();
 				if(answer == 'Test') {
 					output = 'Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.'
