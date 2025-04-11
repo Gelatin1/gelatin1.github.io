@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Lukas's Website">
+		<meta property="og:title" content="Lukas's Website">
+		<meta property="og:description" content="This is my super boring website.">
+		<meta property="og:image" content="/img/koala.png">
+		<title>Slope: Question 5</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="icon" href="/img/koala.png">
+	</head>
+	<body>
+		<div class="header">
+			<button>
+				<a href="/">Home</a>
+			</button>
+            <button>
+                <a href="./">Back</a>
+            </button>
+		</div>
+        <div class="main">
+		    <div class="float">
+			    <h1>Slope: Question 5</h1>
+                <p>
+                    The U.S. Bureau of the Census predicted that the population of Florida would be about 17.4 million in 2010 and then would increase by about 0.22 million per year until 2015. Which of the following linear models predicts the population, y, of Florida (in millions) in terms of x, the number of years since 2010?
+                </p>
+		    </div>
+            <div class="float">
+                <form id="answerform">
+                    <input type="radio" id="a" name="answer" value="y=17.4x+0.22">
+                    <label for="a">y=17.4x+0.22</label><br>
+                    <input type="radio" id="b" name="answer" value="y=-0.22x+17.4">
+                    <label for="b">y=-0.22x+17.4</label><br>
+                    <input type="radio" id="c" name="answer" value="y=0.22x+17.4">
+                    <label for="c">y=0.22x+17.4</label><br>
+                    <input type="radio" id="d" name="answer" value="y=-17.4x+0.22">
+                    <label for="d">y=-17.4x+0.22</label><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+		<div class="footer">
+			<p>
+				&#8239;This page brought to you by Lukas
+			</p>
+		</div>
+		<script>
+			var answerform = document.getElementById('answerform');
+			answerform.addEventListener('submit', function(event) {
+				var answer = answerform.elements['answer'].value;
+				event.preventDefault();
+				if(answer === 'y=0.22x+17.4') {
+					alert('Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.');
+					return;
+				} else {
+					alert('Incorrect answer. Please try again.');
+					return;
+				};
+			});
+		</script>
+	</body>
+</html>
