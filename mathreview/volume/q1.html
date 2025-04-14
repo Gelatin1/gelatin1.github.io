@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Lukas's Website">
+		<meta property="og:title" content="Lukas's Website">
+		<meta property="og:description" content="This is my super boring website.">
+		<meta property="og:image" content="/img/koala.png">
+		<title>Volume: Question 1</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="icon" href="/img/koala.png">
+	</head>
+	<body>
+		<div class="header">
+			<button>
+				<a href="/">Home</a>
+			</button>
+            <button>
+                <a href="./">Back</a>
+            </button>
+		</div>
+        <div class="main">
+		    <div class="float">
+			    <h1>Volume: Question 1</h1>
+                <p>
+                    What is the approximate volume of a cylinder with a radius of 5 in and a height of 4 in?
+                </p>
+		    </div>
+            <div class="float">
+                <form id="answerform">
+                    <input type="radio" id="a" name="answer" value="63">
+                    <label for="a">63 in³</label><br>
+                    <input type="radio" id="b" name="answer" value="105">
+                    <label for="b">105 in³</label><br>
+                    <input type="radio" id="c" name="answer" value="251">
+                    <label for="c">251 in³</label><br>
+                    <input type="radio" id="d" name="answer" value="314">
+                    <label for="d">314 in³</label><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+		<div class="footer">
+			<p>
+				&#8239;This page brought to you by Lukas
+			</p>
+		</div>
+		<script>
+			var answerform = document.getElementById('answerform');
+			answerform.addEventListener('submit', function(event) {
+				var answer = answerform.elements['answer'].value;
+				event.preventDefault();
+				if(answer === '314') {
+					alert('Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.');
+					return;
+				} else {
+					alert('Incorrect answer. Please try again.');
+					return;
+				};
+			});
+		</script>
+	</body>
+</html>
