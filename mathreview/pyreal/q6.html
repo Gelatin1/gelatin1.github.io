@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Lukas's Website">
+		<meta property="og:title" content="Lukas's Website">
+		<meta property="og:description" content="This is my super boring website.">
+		<meta property="og:image" content="/img/koala.png">
+		<title>Py./Real: Question 6</title>
+		<link rel="stylesheet" href="/style.css">
+		<link rel="icon" href="/img/koala.png">
+	</head>
+	<body>
+		<div class="header">
+			<button>
+				<a href="/">Home</a>
+			</button>
+            <button>
+                <a href="./">Back</a>
+            </button>
+		</div>
+        <div class="main">
+		    <div class="float">
+			    <h1>Py./Real: Question 6</h1>
+                <p>
+                    A bird was sitting 5 feet from the base of an oak tree and flew 13 feet to reach the top of the tree. How tall is the tree? You can either type the simplified answer or an answer with a square root. In the latter case, you can use 'v' to represent a square root symbol.
+                </p>
+		    </div>
+            <div class="float">
+                <form id="answerform">
+                    <label for="answer">Answer:</label>
+                    <input type="text" id="answer" name="answer">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+		<div class="footer">
+			<p>
+				&#8239;This page brought to you by Lukas
+			</p>
+		</div>
+		<script>
+			var answerform = document.getElementById('answerform');
+			answerform.addEventListener('submit', function(event) {
+				var answer = document.getElementById('answer').value;
+				event.preventDefault();
+				if(answer === '12' || answer === '√144' || answer === 'v144') {
+					alert('Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.');
+					return;
+				} else {
+					alert('Incorrect answer. Please try again.');
+					return;
+				};
+			});
+		</script>
+	</body>
+</html>
