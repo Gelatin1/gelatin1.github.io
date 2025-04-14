@@ -51,13 +51,13 @@
 		<script>
 			var answerform = document.getElementById('answerform');
 			answerform.addEventListener('submit', function(event) {
-				var answer1 = document.getElementById('answer1').checked;
-                var answer2 = document.getElementById('answer2').checked;
-                var answer3 = document.getElementById('answer3').checked;
-                var answer4 = document.getElementById('answer4').checked;
-                var answer5 = document.getElementById('answer5').checked;
-				event.preventDefault();
-				if(answer1 === false && answer2 === true && answer3 === true && answer4 === false && answer5 === true) {
+                event.preventDefault();
+				var answer1 = document.getElementById('answer1').value;
+                var answer2 = document.getElementById('answer2').value;
+                var answer3 = document.getElementById('answer3').value;
+                var answer4 = document.getElementById('answer4').value;
+                var answer5 = document.getElementById('answer5').value;
+				if(answer1 !== 'on' && answer2 === 'on' && answer3 === 'on' && answer4 !== 'on' && answer5 === 'on') {
 					alert('Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.');
 					return;
 				} else {
