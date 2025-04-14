@@ -7,7 +7,7 @@
 		<meta property="og:title" content="Lukas's Website">
 		<meta property="og:description" content="This is my super boring website.">
 		<meta property="og:image" content="/img/koala.png">
-		<title>Volume: Question 4</title>
+		<title>Volume: Question 5</title>
 		<link rel="stylesheet" href="/style.css">
 		<link rel="icon" href="/img/koala.png">
 	</head>
@@ -22,21 +22,15 @@
 		</div>
         <div class="main">
 		    <div class="float">
-			    <h1>Volume: Question 4</h1>
+			    <h1>Volume: Question 5</h1>
                 <p>
-                    What is the formula for the volume of a sphere?
+                    Fifty metal spheres with the radii of 4 m are melted and this melted solution is poured into a cube with base dimensions of 2 m × 6 m. Find the height of the cube filled with solution. Round to the nearest hundredth.
                 </p>
 		    </div>
             <div class="float">
                 <form id="answerform">
-                    <input type="radio" id="a" name="answer" value="prism">
-                    <label for="a">V=lwh</label><br>
-                    <input type="radio" id="b" name="answer" value="pyramid">
-                    <label for="b">V=⅓lwh</label><br>
-                    <input type="radio" id="c" name="answer" value="cone">
-                    <label for="c">V=⅓πr²h</label><br>
-                    <input type="radio" id="d" name="answer" value="sphere">
-                    <label for="d">V=4⁄3πr³</label><br>
+                    <label for="answer">Answer:</label>
+                    <input type="text" id="answer" name="answer">
                     <input type="submit" value="Submit">
                 </form>
             </div>
@@ -49,9 +43,9 @@
 		<script>
 			var answerform = document.getElementById('answerform');
 			answerform.addEventListener('submit', function(event) {
-				var answer = answerform.elements['answer'].value;
+				var answer = document.getElementById('answer').value;
 				event.preventDefault();
-				if(answer === 'sphere') {
+				if(answer === '1116.44') {
 					alert('Great job! You correctly answered the question. Click the \'Back\' button on the top bar to go back to the menu.');
 					return;
 				} else {
